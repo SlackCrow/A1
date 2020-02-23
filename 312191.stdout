@@ -1,0 +1,16 @@
+SLURM_JOBID=312191
+SLURM_JOB_NODELIST=cpn-d09-28-02,cpn-d09-29-01,cpn-d09-31-01,cpn-d09-33-01,cpn-d09-34-01,cpn-d09-35-[01-02],cpn-d09-36-01
+SLURM_NNODES=8
+SLURMTMPDIR=/scratch/312191
+working directory = /user/jaeheunk/ondemand/data/sys/myjobs/projects/default/1/A1
+ Intel-MPI is in your path. This is adequate for compiling and running most
+codes. Source the
+/util/academic/intel/18.3/compilers_and_libraries_2018.3.222/linux/mpi/intel64/bin/mpivars.sh
+file for more features.
+ The Intel 18.3 compilers are in your path. This is adequate for compiling and
+running most codes. Source compilervars.sh for more features including the
+debugger.
+rm -rf a1
+mpiicpc -std=c++17 -O3 -Wall    a1.cpp   -o a1
+p: 8
+Tp: 12.7046
